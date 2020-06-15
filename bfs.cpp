@@ -93,7 +93,6 @@ int main(){
 		cout << "Digite o vértice origem e o vértice destino da sua navegação: " << endl;
 		cin >> source >> target;
 
-		//bfs navigates paths
 
 		//usando matriz de adjacência
 		cout << bfsM(source, target) << endl;

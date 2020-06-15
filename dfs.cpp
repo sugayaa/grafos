@@ -103,21 +103,19 @@ int main(){
        v[a].pb(mp(b,c));
        v[b].pb(mp(a,c));
        }
-       */
+    */
+
     cout << "Digite o vértice origem e o vértice destino da sua navegação: " << endl;
     cin >> source >> target;
 
-    //bfs navigates paths
+    //print connections
     //print();
 
-    //usando matriz de adjacência
     cout << dfsV(source, 0, target) << endl;
     reset_vis();
     cout << dfsM(source, 0, target) << endl;
 
-    //usando vetor de listas de adjacência
-    //cout << bfsV(source, target) << endl;
-
+    
     /*
        } fim do while para ler N grafos */
 
