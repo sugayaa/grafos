@@ -41,16 +41,16 @@ void preorder(struct node* node) {
         return;
 
     cout << node->value << " ";
-    inorder(node->left);
-    inorder(node->right);
+    preoder(node->left);
+    preorder(node->right);
 }
 
 void postorder(struct node* node) {
     if (node == NULL)
         return;
 
-    inorder(node->left);
-    inorder(node->right);
+    postorder(node->left);
+    postorder(node->right);
     cout << node->value << " ";
 }
 
