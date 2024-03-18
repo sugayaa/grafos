@@ -4,7 +4,7 @@ using namespace std;
 struct node {
     int value;
     struct node *left, *right;
-}
+};
 
 struct node* init(int v){
     struct node* n = new struct node;
@@ -21,7 +21,7 @@ struct node* insert(struct node* node, int v){
 
     if (v < node->value)
         node->left = insert(node->left, v);
-    else  if (key > node->key)
+    else  if (v > node->value)
         node->right = insert(node->right, v);
 
     return node;
@@ -32,7 +32,7 @@ void inorder(struct node* node) {
         return;
 
     inorder(node->left);
-    cout << node->v << " ";
+    cout << node->value << " ";
     inorder(node->right);
 }
 
@@ -40,7 +40,7 @@ void preorder(struct node* node) {
     if (node == NULL)
         return;
 
-    cout << node->v << " ";
+    cout << node->value << " ";
     inorder(node->left);
     inorder(node->right);
 }
@@ -51,9 +51,10 @@ void postorder(struct node* node) {
 
     inorder(node->left);
     inorder(node->right);
-    cout << node->v << " ";
+    cout << node->value << " ";
 }
 
 int main(){
     return 0;
 }
+
