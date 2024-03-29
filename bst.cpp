@@ -74,6 +74,17 @@ struct node* deletenode(struct node* root, int v) {
     }
 }
 
+struct node* search(struct node* root, int v)
+{
+    if (root == NULL || root->value == v)
+        return root;
+
+    if (root->value < v)
+        return search(root->right, v);
+
+    return search(root->left, v);
+}
+
 void inorder(struct node* node) {
     if (node == NULL)
         return;
